@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #4e5a72;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vh  minmax(10vh, min-content) 1fr 20vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  .title{
+    grid-column: 1 /-1;
+    grid-row: 1;
+    font-size: 2rem;
+  }
+  .description{
+    grid-column: 1 /-1;
+    grid-row: 2;
+    max-width: 90vw;
+    justify-self: center;
+  }  
+  .imageComic{
+    max-height: 400px;
+    max-width: 90vw;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: center;
+  }
+  .StarPicker.rating{
+     align-self: start;
+    .DefaultStarComponent{
+       
+        transition: transform 0.2s, text-shadow 0.2s;
+        &.addSelection {
+          color: #ddcb63;
+        }         
+        &.selected {
+        text-shadow: 2px 4px 6px rgba(255, 255, 255, 0.631);       
+        transform: scale(1.2) rotate(40deg);
+      }
+    }
+  }
+  
+  .ramdonbt{
+    width: min-content;
+    height: min-content;
+    border-radius: 50px;
+    padding: 10px;
+    color: white;
+    grid-column: 3;
+    justify-self: center;
+    align-self: start;
+    background-color: rgba(106, 0, 255, 0.433);
+    transition: transform 0.5s, box-shadow 0.5s;
+    &:hover{
+      transform: scale(1.2);
+      background-color: rgba(106, 0, 255, 0.768);
+      box-shadow: 1px 3px 10px rgba(255, 255, 255, 0.631) ;
+    }
+  }
+  
+}
+
+@media screen and (max-width:768px){
+  .rating{
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+}
+@media screen and (min-width:769px){  
+  .rating{
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+
