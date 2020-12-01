@@ -17,4 +17,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+or you can see the application already deployed with vercel in the following link https://comics-one.vercel.app/
+
 In this project you can see a comic randomly obtained from the xkcd.com api with the possibility of giving it a rating from 1 to 5 after selecting the rating, a button will be enabled to change the comic that the page shows
